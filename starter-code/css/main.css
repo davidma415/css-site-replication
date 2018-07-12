@@ -121,24 +121,61 @@ figure.ig-logo, figure.home {
 }
 
 @media screen and (max-width: 860px) {
-  main.container {
-    align-self: center;
-    grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr 1fr;
+  img, a {
+    max-width: 100%;
   }
-
+  main.container {
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    /* align-self: center;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr auto; */
+  }
+  section.content {
+    display: flex;
+    flex-direction: column;
+    order: 1;
+  }
   footer {
-    grid-column: 1/2;
+    order: 3;
   }
 
   section.main-figures {
     margin: 0 auto;
+    order: 2;
   }
+
   div.text {
     margin: 0 auto;
+    order 3;
   }
 
   ul.navbar{
     padding-left: 0;
   }
-}
+
+  div.store-logos {
+    text-align: center;
+  }
+
+  @media screen and (max-width: 505px) {
+    container {
+      width: 100%;
+    }
+
+    figure.ig-logo, .content, div.text{
+      max-width: 100%;
+    }
+
+    .main-logos {
+      display: flex;
+      flex-flow: column;
+    }
+    .ig-logo {
+      order: 1;
+    }
+    .home {
+      order: 2;
+    }
+  }

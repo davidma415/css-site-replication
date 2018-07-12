@@ -20,13 +20,13 @@ ul {
 body {
   font: 200 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
-  background: url("../images/bgtile.png") repeat-x;
+  background: #fff url("../images/bgtile.png") repeat-x;
 }
 
 main {
   margin: 10% auto;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: auto auto;
   grid-template-rows: 1fr auto;
   max-width: 960px;
 }
@@ -54,15 +54,14 @@ main {
 
 .main-logos{
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: auto auto;
 }
 
-.text {
-  background: #fff url("../images/frame.png") no-repeat;
-  width: 424px;
-  min-height: 204px;
+div.text {
+  background: url(../images/frame.png) no-repeat;
   padding: 40px;
-  background-size: stretch;
+  width: 505px;
+  min-height: 200px;
 }
 
 .text ul {
@@ -88,9 +87,35 @@ footer {
   font-weight: 700;
   margin-right: 10px;
   text-transform: uppercase;
-  font-size: 0.6em;
+  font-size: 11px;
 }
 
 .nav-item:last-of-type {
   color: grey;
+}
+
+.nav-item:last-of-type:hover {
+  text-decoration: none;
+  text-shadow: none;
+}
+
+.nav-item a {
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  text-decoration: underline;
+  text-shadow: 1px 1px rgba(0,0,0,0.1);
+}
+
+.nav-item a:visited {
+  color: #1c5380;
+}
+
+section.content {
+  align-self: center;
+}
+
+figure.ig-logo, figure.home {
+  margin: 0;
 }

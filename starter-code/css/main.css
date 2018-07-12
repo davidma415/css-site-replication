@@ -119,3 +119,26 @@ section.content {
 figure.ig-logo, figure.home {
   margin: 0;
 }
+
+@media screen and (max-width: 860px) {
+  main.container {
+    align-self: center;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  footer {
+    grid-column: 1/2;
+  }
+
+  section.main-figures {
+    margin: 0 auto;
+  }
+  div.text {
+    margin: 0 auto;
+  }
+
+  ul.navbar{
+    padding-left: 0;
+  }
+}
